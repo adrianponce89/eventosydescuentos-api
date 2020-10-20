@@ -1,13 +1,14 @@
 // app.ts
-import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import routes from './routes';
+import connectDB from './config/db.config';
 
-dotenv.config();
+// DB Connection
+connectDB();
 
-const app = express();
+const app: express.Application = express();
 
 // Cors
 app.use(cors());

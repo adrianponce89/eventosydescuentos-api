@@ -1,6 +1,8 @@
-import expressRouter from 'express-promise-router';
-const router = expressRouter();
+import express from 'express';
+import schedulesRouter from './schedules';
 
-// router.use('/events', require('./events'));
+const router = express.Router();
+
+router.use('/schedules', schedulesRouter);
 
 export default router;
